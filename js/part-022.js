@@ -104,5 +104,5 @@
   // La carte native reste masquée si un ancien point d’entrée de l’application la reconstruit.
   const sc=$('#studyContent');if(sc){const hideLegacy=()=>{if(sc.querySelector('#appFont'))sc.classList.add('m4-settings-legacy');else sc.classList.remove('m4-settings-legacy')};new MutationObserver(hideLegacy).observe(sc,{childList:true,subtree:true});hideLegacy()}
   window.M4FinalSettings={applyTheme,getTheme,setScale,getScale,setPresentation:setPres,getPresentation:getPres,open:openWing,close:()=>closeSettings(true)};
-  document.title='Malachi 4 Bible d’étude';
+  document.title='WMB Bible d’étude';
 })();
