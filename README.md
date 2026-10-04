@@ -2,7 +2,7 @@
 
 Bible d’étude hors connexion (PWA installable) — textes officiels **Shekinah** (branham.fr) et **VGR / The Table officiel** (table.branham.org), avec référence croisée verset ↔ paragraphe.
 
-- **Application en ligne :** https://chris-oint.github.io/WMB-Bible-etude/
+- **Application en ligne :** https://chris-oint.github.io/Elie-le-Prophete/
 - **Installation :** ouvrir le lien, puis « Ajouter à l’écran d’accueil » / « Installer l’application ».
 - **Hors connexion :** bouton **Télécharger tous les textes** (≈ 50 Mo une seule fois) ; le service worker met ensuite tout le contenu en cache.
 
