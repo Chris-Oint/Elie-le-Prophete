@@ -158,7 +158,7 @@ function activatePara(n,onlyVi){
     else if(typeof h[6]==='string')extra=`<div style="font-size:12px;color:var(--c0);font-weight:700;margin-top:4px">Référence donnée : ${esc(h[6])}</div>`;
     return `<div class="vitem" style="${onlyVi===vi?'border-color:var(--blue)':''}"><span class="k c${h[3]}">${CAT[h[3]]}</span><b style="font-size:13px">${vref(vi)}</b>${extra}
       <div class="found"><span style="font:800 10px sans-serif;color:#8A6A3A">TROUVÉ DANS LE PARAGRAPHE :</span><br><b>${fr.join('</b> … <b>')}</b></div>
-      <div class="arrow">➜ ${vref(vi)} • Louis Segond 1910</div><div class="vbox">« ${esc(vtext(vi))} »</div>
+      <div class="arrow">➜ ${vref(vi)}</div><div class="vbox">« ${esc(vtext(vi))} »</div>
       <div class="vacts"><button data-read="${vi}">📖 Lire dans la Bible</button><button class="l" data-where="${vi}">🔗 Où ailleurs ? ${nb.toLocaleString('fr')} paragraphes</button>${U.length>1?`<button class="l" data-only="${vi}">🎯 Colorer seulement ce verset</button>`:''}</div></div>`}).join('');
   $('shBody').scrollTop=0;
   $('shBody').querySelectorAll('[data-read]').forEach(e=>e.onclick=()=>{const vi=+e.dataset.read;closeSheet();goBible(VB[vi],VC[vi],VV[vi])});

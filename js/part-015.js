@@ -41,7 +41,7 @@ function paintDrawer(){if(typeof D==='undefined'||!D||!drawer)return;const q=($(
   h+='<div class="dsec">En lecture</div><div class="dit" data-b="'+S.book+'" style="background:#EEF2FF;border:2px solid var(--navy)">'+D.books[S.book][0]+' '+S.chap+'<small>'+D.books[S.book][1].length+' chapitres</small></div>';
   const g=(a,b)=>B.filter(i=>i>=a&&i<b).map(i=>'<button type="button" data-b="'+i+'" class="'+(i===S.book?'on':'')+'" title="'+D.books[i][0]+'">'+D.books[i][0]+'</button>').join('');
   const at=g(0,39),nt=g(39,66);if(at)h+='<div class="dsec">Ancien Testament</div><div class="v9-grid">'+at+'</div>';if(nt)h+='<div class="dsec">Nouveau Testament</div><div class="v9-grid">'+nt+'</div>';if(!at&&!nt)h+='<div style="padding:16px;color:var(--mut);font-size:13px">Aucun livre.</div>';
-  h+='<div class="dsec">Bibles</div><div class="dit" style="background:#EEF2FF"><b>Louis Segond 1910</b> — révisée Malachi 4<small>Hé 13:20, Jn 14:12, Ap 5 (Martin), perpétuel, fornication</small></div>';}
+  h+='<div class="dsec">Bibles</div><div class="dit" style="background:#EEF2FF"><b>Bible</b></div>';}
  else{h+='<div class="v9-logo"><img src="'+$('hdrPhoto').src+'" alt=""><div><b>William Marrion Branham</b><small>'+D.meta.length+' brochures · 1947–1965 · Shekinah &amp; VGR</small></div></div>';
   if(S.doc!=null){const m=D.meta[S.doc];h+='<div class="dsec">En lecture</div><div class="dit" data-d="'+S.doc+'" style="background:var(--ink);color:#fff">'+m[0]+' '+m[1]+'<small>'+m[3]+' • '+m[5]+' §</small></div>';}
   let M=D.meta.map((m,i)=>i).filter(i=>!fq||fold(D.meta[i][0]+' '+D.meta[i][1]).includes(fq));const seen=new Set();M=M.filter(i=>{const k=D.meta[i][0];if(seen.has(k)&&D.meta[i][2]==='VGR')return false;seen.add(k);return true;});

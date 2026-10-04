@@ -1,4 +1,4 @@
-const CACHE_NAME = 'malachi4-app-v7';
+const CACHE_NAME = 'wmb-app-v1';
 const CORE_PATHS = [
   "./",
   "./index.html",
@@ -68,9 +68,13 @@ async function installShell() {
 
   for (const url of urls()) {
     if (isBrochureData(url)) {
-      // Les brochures ont été remplacées par les textes officiels : ne jamais
-      // réutiliser l'ancienne version en cache. L'utilisateur les retélécharge
-      // avec « Télécharger tous les textes » (elles ne sont pas dans le cache v7).
+      // Les textes sont identiques d'une version à l'autre de l'application :
+      // on les recopie au lieu d'imposer un retéléchargement de ~50 Mo.
+      // S'ils sont absents, « Télécharger tous les textes » les récupère.
+      for (const previous of oldCaches) {
+        const hit = await previous.match(url);
+        if (hit) { await cache.put(url, hit); break; }
+      }
       continue;
     }
     try {
@@ -110,7 +114,7 @@ self.addEventListener('install', event =>
 // own service worker and cache, which must survive updates of this app.
 self.addEventListener('activate', event => event.waitUntil(
   caches.keys()
-    .then(keys => Promise.all(keys.filter(key => key.startsWith('malachi4-app-') && key !== CACHE_NAME).map(key => caches.delete(key))))
+    .then(keys => Promise.all(keys.filter(key => key.startsWith('wmb-app-') && key !== CACHE_NAME).map(key => caches.delete(key))))
     .then(() => self.clients.claim())
 ));
 
