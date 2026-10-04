@@ -1,6 +1,7 @@
 {
-  "name": "WMB Bible d’étude",
-  "short_name": "WMB Bible d’étude",
+  "id": "/WMB-Bible-etude/",
+  "name": "WMB Bible d’étude (Élie le Prophète)",
+  "short_name": "Élie le Prophète",
   "description": "Bible d’étude, brochures et notes personnelles, disponibles même hors connexion.",
   "lang": "fr",
   "dir": "ltr",

@@ -1,4 +1,4 @@
-const CACHE_NAME = 'wmb-app-v1';
+const CACHE_NAME = 'wmb-app-v2';   // v2 : nouvelle identité d’application (installation)
 const CORE_PATHS = [
   "./",
   "./index.html",

@@ -4,7 +4,7 @@ var I={i192:"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAIAAADdvvtQA
 var l=document.querySelector('link[rel="manifest"]');
 if(false&&/^https?:$/.test(location.protocol)&&l){
 var base=location.href.split('#')[0].split('?')[0];
-var m={name:"WMB Bible d\u2019\u00e9tude",short_name:"WMB",lang:"fr",display:"standalone",orientation:"any",background_color:"#f6f3ee",theme_color:"#f6f3ee",start_url:base,scope:base.replace(/[^\/]*$/,''),
+var m={name:"WMB Bible d\u2019\u00e9tude (\u00c9lie le Proph\u00e8te)",short_name:"\u00c9lie le Proph\u00e8te",lang:"fr",display:"standalone",orientation:"any",background_color:"#f6f3ee",theme_color:"#f6f3ee",start_url:base,scope:base.replace(/[^\/]*$/,''),
 icons:[{src:I.i192,sizes:"192x192",type:"image/png",purpose:"any"},{src:I.i512,sizes:"512x512",type:"image/png",purpose:"any"},{src:I.i512m,sizes:"512x512",type:"image/png",purpose:"maskable"}]};
 l.href=URL.createObjectURL(new Blob([JSON.stringify(m)],{type:"application/manifest+json"}));}
 }catch(e){}})();
