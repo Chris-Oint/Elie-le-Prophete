@@ -23,5 +23,5 @@ Corpus reconstruit à partir des sources officielles : Little Storehouse / branh
 - `index.html` — application (un seul écran, chargement des `js/part-0xx.js`)
 - `js/part-004.js` — données (index des documents, liens, patchs recherche)
 - `data/brochures_z1..z5.json.gz` — corpus compressé par zone
-- `sw.js` — service worker (`malachi4-app-v7`) pour le hors connexion
+- `sw.js` — service worker (`wmb-app-v1`) pour le hors connexion
 - `manifest.webmanifest` — métadonnées PWA (installation, icônes)
